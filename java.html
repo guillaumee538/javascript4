@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript exo1</title>
+  </head>
+  <body>
+    <form>
+        <label for="lastname">Nom : </label>
+        <input type="text" name="lastname" id="lastname" value="" />
+        <label for="firstname">Prénom : </label>
+        <input type="text" name="firstname" id="firstname"/>
+        <label for="city">Ville : </label>
+        <input type="text" name="city" id="city"/>
+        <button  name="submit" id="submit">Valider</button>
+    </form>
+    <script>
+      // On appelle l'id de notre bouton et on lui assigne une ecoute d'evenement quand l'utilisateur clique qui renvoie sur une fonction
+      document.getElementById('submit').addEventListener('click', displayUserInfo);
+      //on crée une fonction qui recupére les valeur de nos champ et ensuite les affiche.
+      function displayUserInfo() {
+        var lastname = document.getElementById('lastname').value;
+        var firstname = document.getElementById('firstname').value;
+        var city = document.getElementById('city').value;
+        // On fait un alert pour afficher le résultat.
+        alert('nom: '+ lastname + '\n'+ 'prénom : ' + firstname + '\n'+ 'ville : ' + city);
+        }
+    </script>
+  </body>
+</html>
